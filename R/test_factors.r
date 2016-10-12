@@ -41,9 +41,8 @@ test_factors <- function(DF)
 #' @template internals
 #' @export
 get_numerics <- function(MV)
-{  
-  mvs_class = sapply(MV, class)
-  mvs_as_factors <- mvs_class == "factor"
+{ 
+  mvs_as_factors = sapply(MV, is.factor)
   categorical = which(mvs_as_factors)
   categories = vector(mode="list", ncol(MV))
   
