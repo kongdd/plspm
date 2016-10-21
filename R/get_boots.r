@@ -139,7 +139,7 @@ function(DM, path_matrix, blocks, specs, br)
        loadings = LB, 
        paths = PB, 
        rsq = RB, 
-       total.efs = TE
+       total.efs = TE,
 	   indir.efs = IE
 	   )
 }
