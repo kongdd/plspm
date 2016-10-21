@@ -101,6 +101,7 @@ function(DM, path_matrix, blocks, specs, br)
     Toef.boot <- get_effects(P.boot)
     PATHS[i,] <- as.vector(P.boot[path_matrix==1])
     TOEFS[i,] <- Toef.boot[,4]
+	INEFS[i,] <- TOEFS[i,] - PATHS[i,]
     RSQRS[i,] <- pathmod[[3]][endo==1]
     xloads = cor(X.boot, Y.boot)
     LOADS[i,] = rowSums(xloads * w.boot$ODM)
@@ -129,13 +130,18 @@ function(DM, path_matrix, blocks, specs, br)
   # Total effects
   colnames(TOEFS) = Path.efs[, 1]
   TE = get_boot_stats(TOEFS, Path.efs[,4]) 
+  # Indirect effects
+  colnames(INEFS) = Path.efs[, 1]
+  IE = get_boot_stats(IEFS, Path.efs[,3])
   
   # Bootstrap Results
   list(weights = WB, 
        loadings = LB, 
        paths = PB, 
        rsq = RB, 
-       total.efs = TE)
+       total.efs = TE
+	   indir.efs = IE
+	   )
 }
 
 
