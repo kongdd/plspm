@@ -7,17 +7,14 @@
 Stable version on [CRAN](http://cran.r-project.org/web/packages/plspm/index.html)
 ```ruby
 # install "plspm"
-install.packages("plspm") 
+install.packages("plspm")  
 ```
 
 Development version on [github](https://github.com/gastonstat/plspm)
 ```ruby
 # install "devtools"
 install.packages("devtools") 
-library(devtools)
-
-# install "plspm"
-install_github("gastonstat/plspm")
+devtools::install_github("gastonstat/plspm")
 ```
 
 
@@ -32,12 +29,12 @@ library(plspm)
 data(satisfaction)
 
 # define path matrix (inner model)
-IMAG < -c(0,0,0,0,0,0)
+IMAG <- c(0,0,0,0,0,0)
 EXPE <- c(1,0,0,0,0,0)
 QUAL <- c(0,1,0,0,0,0)
-VAL <- c(0,1,1,0,0,0)
-SAT <- c(1,1,1,1,0,0) 
-LOY <- c(1,0,0,0,1,0)
+VAL  <- c(0,1,1,0,0,0)
+SAT  <- c(1,1,1,1,0,0) 
+LOY  <- c(1,0,0,0,1,0)
 sat_path <- rbind(IMAG, EXPE, QUAL, VAL, SAT, LOY)
 
 # define list of blocks (outer model)

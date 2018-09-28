@@ -304,7 +304,7 @@ function(pls, group, Y = NULL, method = "bootstrap", reps = NULL)
 }
 
 
-#' @S3method print plspm.groups
+#' @export
 print.plspm.groups <- function(x,...)
 {
   cat("GROUP COMPARISON IN PLS-PM FOR PATH COEFFICIENTS", "\n\n")

@@ -1,4 +1,4 @@
-#' @S3method summary plspm
+#' @export
 summary.plspm <- function(object, ...)
 {
   ## Reminder of model in objects "plspm"
@@ -52,7 +52,7 @@ summary.plspm <- function(object, ...)
 }
 
 
-#' @S3method print summary.plspm
+#' @export
 print.summary.plspm <- function(x, ...)
 {
   ## Reminder of model in objects "plspm"

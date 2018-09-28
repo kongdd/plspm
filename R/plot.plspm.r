@@ -28,7 +28,7 @@
 #' @seealso \code{\link{innerplot}}, \code{\link{outerplot}}, 
 #' \code{\link{plspm}}
 #' @method plot plspm
-#' @S3method plot plspm
+#' @export
 #' @examples
 #' 
 #'  \dontrun{
