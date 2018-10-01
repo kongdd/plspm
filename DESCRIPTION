@@ -22,6 +22,8 @@ Imports:
     diagram,
     shape,
     amap
+Remotes:
+    gastonstat/matrixkit
 Suggests:
     plsdepot,
     FactoMineR,
